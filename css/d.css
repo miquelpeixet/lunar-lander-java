@@ -1,4 +1,4 @@
-body,html{height:100%;padding:0px;margin:0px;background-image:url("/img/space.png");}
+body,html{height:100%;padding:0px;margin:0px;background-image:src("/img/space.png");
 .a{background-color:rgb(107, 107, 241);}
 .b{background-color:rgb(56, 54, 54);}
 .c{background-color:rgb(107, 107, 241);display:block !important}
