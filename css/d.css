@@ -1,6 +1,6 @@
 body,html{height:100%;padding:0px;margin:0px;}
 
-.a,.b,.c{background-image:url("../img/space.png");display:inline-block;width:33.33%;height:100%;float:left;color:green;}
+.a,.b,.c{background-image:url("../img/space.jpg");display:inline-block;width:33.33%;height:100%;float:left;color:green;}
 .c{display:block !important}
 .d{background-image:url("../img/moon.png");height:10%;width:100%;position:fixed;bottom:0px;background-size:cover}
 
