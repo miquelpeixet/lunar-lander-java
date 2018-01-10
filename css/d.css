@@ -1,7 +1,12 @@
 body,html{height:100%;padding:0px;margin:0px;}
-.a,.b,.c{background-image:url("../img/space.jpg");display:inline-block;width:33.33%;height:100%;float:left;}
-.c{background-color:black;display:block !important}
-.d{background-color:yellow;height:10%;width:100%;position:fixed;bottom:0px;}
+
+.a{background-image:url("../img/space.jpg");}
+.b{background-image:url("../img/space.jpg");}
+.c{background-image:url("../img/space.jpg");display:block !important}
+.a,.b,.c{display:inline-block;width:33.33%;height:100%;float:left;color:green;}
+
+.d{background-color:yellow;height:10%;width:100%;position:fixed;bottom:0px;background-size:cover}
+
 #nave{text-align:center;position:fixed;top:10%;width:100%;height:20%}
 #nave img{height:100%;}
 #cpanel{}
