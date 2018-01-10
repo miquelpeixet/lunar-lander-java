@@ -1,8 +1,8 @@
 body,html{height:100%;padding:0px;margin:0px;}
 
-.a{background-image:url("../img/space.jpg");}
-.b{background-image:url("../img/space.jpg");}
-.c{background-image:url("../img/space.jpg");display:block !important}
+.a{background-image:url("../img/space.png");}
+.b{background-image:url("../img/space.png");}
+.c{background-image:url("../img/space.png");display:block !important}
 .a,.b,.c{display:inline-block;width:33.33%;height:100%;float:left;color:green;}
 
 .d{background-color:yellow;height:10%;width:100%;position:fixed;bottom:0px;background-size:cover}
