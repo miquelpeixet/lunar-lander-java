@@ -11,3 +11,4 @@ body,html{height:100%;padding:0px;margin:0px;}
 #nave img{height:100%;}
 #cpanel{}
 #hidem,#showm{display:none}
+#menu{width:100%;height:auto;padding:5px 10px;overflow:hidden}
