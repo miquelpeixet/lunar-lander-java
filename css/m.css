@@ -6,6 +6,8 @@ body,html{height:100%;padding:0px;margin:0px;}
 
 #nave{text-align:center;position:fixed;top:10%;width:100%;height:20%}
 #nave img{height:100%;}
-#cpanel{}
+#cpanel{padding:6%; color:green;vertical-align: middle;}
+#cpanel ul li{display: inline-block;vertical-align: middle;text-align: center; list-style-position: inside;margin: 0;padding: 0;}
+#cpanel img{padding-right:2%;width:20%}
 #hidem,#showm{float:right}
 #menu{widt:100%,height:auto;padding:5px 10px;overflow:hiddern}
