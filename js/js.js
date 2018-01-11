@@ -2,13 +2,17 @@
 //ENTORNO
 var g = 1.622;
 var dt = 0.016683;
-var timer=null;
-var timerFuel=null;
+var timer = null;
+var timerFuel = null;
+var fuel = 100;
+var actiu = true;
+
 //NAVE
 var y = 10; // altura inicial y0=10%, debe leerse al iniciar si queremos que tenga alturas diferentes dependiendo del dispositivo
 var v = 0;
 var c = 100;
 var a = g; //la aceleración cambia cuando se enciende el motor de a=g a a=-g (simplificado)
+
 //MARCADORES
 var velocidad = null;
 var altura = null;
@@ -63,6 +67,7 @@ function moverNave(){
 	//cambiar velocidad y posicion
 	v +=a*dt;
 	y +=v*dt;
+	
 	//actualizar marcadores
 	velocidad.innerHTML=v;
 	altura.innerHTML=y;
