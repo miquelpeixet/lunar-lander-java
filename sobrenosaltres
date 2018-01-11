@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Sobre nosaltres...</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel='stylesheet' media='screen and (min-width: 961px)' href='css/d.css'>
+      <link rel='stylesheet' media='screen and (max-width: 960px)' href='css/m.css'>
+   </head>
+   <body>
+      <div class="a"></div>
+      <div class="b">
+         <h2> Miquel Ginad Palou</h2>
+         <p>Per desenvolupar aquest joc s'ha consultat la pàgina <a href="http://www.w3schools.com" >w3schools.com</a> així com també s'han hagut de realitzar nombroses recerques i proves per tal de poder elaborar els codis correctament.</p>
+         <p>Per aquest motiu, cal agrair als diferens companys així com als autors de diferents pàgines i també als del manual "Curso de desarrolo Web HTML, CSS y JavaScript" la seva col·laboració directa, indirecta i sempre deinsteressada i que ha estat fonamental per al correcte desenvolupament del projecte.</p> 
+      </div>
+      <div class="c"></div>
+      <div class="d">d</div>
+   </body>
+</html>
