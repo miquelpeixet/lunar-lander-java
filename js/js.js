@@ -107,7 +107,7 @@ function motorOff(){
 	a=g;
 	clearInterval(timerFuel);
 	timerFuel=null;
-	document.getElementById("imgnave").src=("img/naveoff.png);
+	document.getElementById("imgnave").src=("img/naveoff.png");
 }
 function actualizarFuel(){
 	//Restamos combustible hasta que se agota
