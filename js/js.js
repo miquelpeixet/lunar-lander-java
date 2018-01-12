@@ -1,4 +1,3 @@
-
 var y = 10; // altura inicial y0=10%, debe leerse al iniciar si queremos que tenga alturas diferentes dependiendo del dispositivo
 var z= 70; 
 var alt= 70;
@@ -67,10 +66,10 @@ function moverNave()
 	if (y<70){ 
 		document.getElementById("nave").style.top = y+"%"; 
 	} else {
-		 stop(); aterratge();
+		 stop(); alunizaje();
 	}
 }
-function aterratge()
+function alunizaje()
 {
     if (v <= 10)
         {
@@ -93,7 +92,7 @@ function motorOn()
 	a=-g;
 	if (timerFuel==null)
 	timerFuel=setInterval(function(){ actualizarFuel(); }, 100);
-    document.getElementById("imgnave").src="img/naveon.gif";
+    document.getElementById("imgnave").src="img/naveon.png";
     
 }
 function motorOff()
