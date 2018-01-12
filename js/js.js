@@ -1,35 +1,23 @@
 
-//ENTORNO
-var g = 1.622;
-var dt = 0.016683;
-var timer = null;
-var timerFuel = null;
-var fuel = 100;
-var actiu = true;
-
-//NAVE
 var y = 10; // altura inicial y0=10%, debe leerse al iniciar si queremos que tenga alturas diferentes dependiendo del dispositivo
+var z= 70; 
+var alt= 70;
 var v = 0;
-var c = 100;
-var a = g; //la aceleración cambia cuando se enciende el motor de a=g a a=-g (simplificado)
-
-//MARCADORES
-var velocidad = null;
-var altura = null;
-var combustible = null;
+var g = 1.622;
+var a = g;
+var dt = 0.016683;
+var timer=null;
+var timerFuel=null;
+var fuel=100;
 
 //al cargar por completo la página...
-window.onload = function(){
-	
-	velocidad = document.getElementById("velocidad");
-	altura = document.getElementById("altura");
-	combustible = document.getElementById("fuel");
-
-	
+window.onload = function()
+{
 	//definición de eventos
 	//mostrar menú móvil
     	document.getElementById("showm").onclick = function () {
 		document.getElementsByClassName("c")[0].style.display = "block";
+    
 		stop();
 	}
 	//ocultar menú móvil
@@ -44,86 +32,92 @@ window.onload = function(){
  	  } else {
   		motorOff();
  	  }
-	}
+    }
 	//encender/apagar al apretar/soltar una tecla
 	document.onkeydown = motorOn;
 	document.onkeyup = motorOff;
 	
-	//Empezar a mover la nave justo después de cargar la página
+	//Empezar a mover nave
 	start();
 }
 
 //Definición de funciones
-function start(){
-	//cada intervalo de tiempo mueve la nave
+function start()
+{
 	timer=setInterval(function(){ moverNave(); }, dt*1000);
 }
 
-function stop(){
+function stop()
+{
 	clearInterval(timer);
 }
 
-function moverNave(){
-	//cambiar velocidad y posicion
+function moverNave()
+{
 	v +=a*dt;
+    vel = v.toFixed(2); 
+	document.getElementById("velocidad").innerHTML=vel;
 	y +=v*dt;
+    z -=v*dt; 
+    alt = z.toFixed(2); 
 	
-	//actualizar marcadores
-	velocidad.innerHTML=v;
-	altura.innerHTML=y;
+	document.getElementById("altura").innerHTML= alt; 
 	
 	//mover hasta que top sea un 70% de la pantalla
 	if (y<70){ 
 		document.getElementById("nave").style.top = y+"%"; 
-	} else { 
-		stop();aterratge();
+	} else {
+		 stop(); aterratge();
 	}
 }
 function aterratge()
 {
-	if (v<= 10)
-}
-	//Felicitació
-	document.getElementById("imgnave").src="img/confeti.gif";
-	alert("Enhorabona, has demostrat ser un gran pilot!");
-	} else 
-	{
-	
-	//Sense combustible
-	document.getElementById("imgnave").src="img/explosion.gif";
-    	alert("Intenta-ho de nou a menor velocitat, t'acabes d'estavellar contra la superfície");
+    if (v <= 10)
+        {
+        //Felicitación por la llegada
+        document.getElementById("imgnave").src="img/confeti.gif";
+        alert("Enhorabona, has demostrat ser un gran pilot!");
+        
         }
+    else
+    {
+    // Sin combustible????
+    document.getElementById("imgnave").src="img/explosion.gif";
+    alert("Intenta-ho de nou a menor velocitat, t'acabes d'estavellar contra la superfície");
+        
+    }
 }
 
-function motorOn(){
-	//el motor da aceleración a la nave
+function motorOn()
+{
 	a=-g;
-	//mientras el motor esté activado gasta combustible
 	if (timerFuel==null)
-	timerFuel=setInterval(function(){ actualizarFuel(); }, 10);
-	document.getElementById("imgnave").src="img/naveon.png";
+	timerFuel=setInterval(function(){ actualizarFuel(); }, 100);
+    document.getElementById("imgnave").src="img/naveon.gif";
+    
 }
-function motorOff(){
+function motorOff()
+{
 	a=g;
 	clearInterval(timerFuel);
 	timerFuel=null;
-	document.getElementById("imgnave").src=("img/naveoff.png");
+    document.getElementById("imgnave").src=("img/naveoff.png");
+   
 }
-function actualizarFuel(){
-	//Restamos combustible hasta que se agota
-	c-=0.1;
-	if (c < 0 ) c = 0;
-	combustible.innerHTML=c;
+
+function actualizarAltura()
+{
+	//Aquí hay que cambiar el valor del marcador de Fuel...
+	if (fuel>0 && alt>0)
+    {
+    fuel-=1;
+	document.getElementById("fuel").innerHTML=fuel;	
+    }
+    else
+    {
+    motorOff()
+    document.getElementById("nave").src=null;
+    document.onkeydown=null;
+    document.onkeyup=null;
+    }
 }
-	else
-	{
-	motorOff()
-	document.getElementById("nave").src=null;
-   	document.onkeydown=null;
-   	document.onkeyup=null;
-	}
-}
-		
-		
-		
-	
