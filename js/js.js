@@ -113,5 +113,5 @@ function actualizarFuel(){
 	//Restamos combustible hasta que se agota
 	c-=0.1;
 	if (c < 0 ) c = 0;
-	combustible.innerHTML=c;	
+	combustible.innerHTML=c;
 }
