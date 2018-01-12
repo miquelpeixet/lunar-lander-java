@@ -84,15 +84,15 @@ function aterratge()
 	if (v<= 10)
 }
 	//Felicitació
-	document.getElementById("imgnave").src=img/confeti.gif";
+	document.getElementById("imgnave").src="img/confeti.gif";
 	alert("Enhorabona, has demostrat ser un gran pilot!");
-	} else {
+	} else 
+	{
 	
-	//sense combustible
+	//Sense combustible
 	document.getElementById("imgnave").src="img/explosion.gif";
     	alert("Intenta-ho de nou a menor velocitat, t'acabes d'estavellar contra la superfície");
-        
-    }
+        }
 }
 
 function motorOn(){
@@ -100,12 +100,14 @@ function motorOn(){
 	a=-g;
 	//mientras el motor esté activado gasta combustible
 	if (timerFuel==null)
-	timerFuel=setInterval(function(){ actualizarFuel(); }, 10);	
+	timerFuel=setInterval(function(){ actualizarFuel(); }, 10);
+	document.getElementById("imgnave").src="img/naveon.png";
 }
 function motorOff(){
 	a=g;
 	clearInterval(timerFuel);
 	timerFuel=null;
+	document.getElementById("imgnave").src=("img/naveoff.png);
 }
 function actualizarFuel(){
 	//Restamos combustible hasta que se agota
