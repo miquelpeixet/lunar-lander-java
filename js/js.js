@@ -66,10 +66,10 @@ function moverNave()
 	if (y<70){ 
 		document.getElementById("nave").style.top = y+"%"; 
 	} else {
-		 stop(); alunizaje();
+		 stop(); aterratge();
 	}
 }
-function alunizaje()
+function aterratge()
 {
     if (v <= 10)
         {
@@ -91,7 +91,7 @@ function motorOn()
 {
 	a=-g;
 	if (timerFuel==null)
-	timerFuel=setInterval(function(){ actualizarFuel(); }, 100);
+	timerFuel=setInterval(function(){ actualizarAltura(); }, 100);
     document.getElementById("imgnave").src="img/naveon.png";
     
 }
