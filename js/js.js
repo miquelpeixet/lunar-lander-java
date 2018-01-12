@@ -79,6 +79,14 @@ function moverNave(){
 		stop();
 	}
 }
+function aterratge()
+{
+	if (v<= 10)
+}
+	//Felicitació
+	document.getElementById("
+
+
 function motorOn(){
 	//el motor da aceleración a la nave
 	a=-g;
