@@ -1,4 +1,4 @@
-##**Lunar Lander**##
+**Lunar Lander**
 
 Versió inacabada de Lunar Lander, senzill joc per a l'aplicació dels coneixements apresos en html, css i javascript.
 
