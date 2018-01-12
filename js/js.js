@@ -115,3 +115,15 @@ function actualizarFuel(){
 	if (c < 0 ) c = 0;
 	combustible.innerHTML=c;
 }
+	else
+	{
+	motorOff()
+	document.getElementById("nave").src=null;
+   	document.onkeydown=null;
+   	document.onkeyup=null;
+	}
+}
+		
+		
+		
+	
