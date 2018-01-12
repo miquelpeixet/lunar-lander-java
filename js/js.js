@@ -76,7 +76,7 @@ function moverNave(){
 	if (y<70){ 
 		document.getElementById("nave").style.top = y+"%"; 
 	} else { 
-		stop();
+		stop();aterratge();
 	}
 }
 function aterratge()
@@ -84,8 +84,16 @@ function aterratge()
 	if (v<= 10)
 }
 	//Felicitació
-	document.getElementById("
-
+	document.getElementById("imgnave").src=img/confeti.gif";
+	alert("Enhorabona, has demostrat ser un gran pilot!");
+	} else {
+	
+	//sense combustible
+	document.getElementById("imgnave").src="img/explosion.gif";
+    	alert("Intenta-ho de nou a menor velocitat, t'acabes d'estavellar contra la superfície");
+        
+    }
+}
 
 function motorOn(){
 	//el motor da aceleración a la nave
